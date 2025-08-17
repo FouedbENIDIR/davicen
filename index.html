@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Davicen — Conseil, Développement & IA</title>
+    <meta name="description" content="Davicen helps you to transform: applications sur mesure, data & conseil, intégration et développement d’IA.">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    
+    <meta property="og:title" content="Davicen — Conseil, Développement & IA">
+    <meta property="og:description" content="Davicen helps you to transform digitally with AI.">
+    <meta property="og:image" content="assets/og.jpg">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="#hero" class="logo">
+                <img src="assets/logo.svg" alt="Davicen logo" width="128" height="32">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#hero" data-i18n="nav.home"></a></li>
+                    <li><a href="#expertise" data-i18n="nav.expertise"></a></li>
+                    <li><a href="#projects" data-i18n="nav.projects"></a></li>
+                    <li><a href="#team-contact" data-i18n="nav.teamContact"></a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="lang-switch" data-lang="fr">FR</button>
+                <span>/</span>
+                <button class="lang-switch" data-lang="en">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <section id="hero" class="frame">
+            <div class="container hero-content">
+                <p class="kicker" data-i18n="hero.kicker"></p>
+                <h1 class="headline" data-i18n="hero.headline"></h1>
+                <div class="cta-group">
+                    <a href="#team-contact" class="btn btn-primary" data-i18n="hero.ctaPrimary"></a>
+                    <a href="#projects" class="btn btn-secondary" data-i18n="hero.ctaSecondary"></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="expertise" class="frame">
+            <div class="container">
+                <h2 data-i18n="expertise.title"></h2>
+                <ul class="expertise-list" data-i18n-list="expertise.items">
+                    </ul>
+            </div>
+        </section>
+
+        <section id="projects" class="frame">
+            <div class="container">
+                <h2 data-i18n="projects.title"></h2>
+                <div class="carousel">
+                    <div class="carousel-track-container">
+                        <div class="carousel-track">
+                            <div class="carousel-slide">
+                                <div class="project-card">
+                                    <img src="assets/projects/data-realtime.jpg" alt="Real-time data platform project">
+                                    <div class="card-content">
+                                        <h3 data-i18n-object='{"path": "carousel.0.title"}'></h3>
+                                        <div class="tags"><span>Data</span><span>Streaming</span><span>Cloud</span></div>
+                                        <details>
+                                            <summary><span data-i18n="projects.learnMore"></span></summary>
+                                            <p data-i18n-object='{"path": "carousel.0.details"}'></p>
+                                        </details>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="carousel-slide">
+                                <div class="project-card">
+                                    <img src="assets/projects/custom-b2b.jpg" alt="Custom B2B application project">
+                                    <div class="card-content">
+                                        <h3 data-i18n-object='{"path": "carousel.1.title"}'></h3>
+                                        <div class="tags"><span>Frontend</span><span>Backend</span></div>
+                                        <details>
+                                            <summary><span data-i18n="projects.learnMore"></span></summary>
+                                            <p data-i18n-object='{"path": "carousel.1.details"}'></p>
+                                        </details>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="carousel-slide">
+                                <div class="project-card">
+                                    <img src="assets/projects/ai-integration.jpg" alt="AI Integration project">
+                                    <div class="card-content">
+                                        <h3 data-i18n-object='{"path": "carousel.2.title"}'></h3>
+                                        <div class="tags"><span>AI</span><span>NLP</span></div>
+                                        <details>
+                                            <summary><span data-i18n="projects.learnMore"></span></summary>
+                                            <p data-i18n-object='{"path": "carousel.2.details"}'></p>
+                                        </details>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="carousel-button prev" aria-label="Previous project">&lt;</button>
+                        <button class="carousel-button next" aria-label="Next project">&gt;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="team-contact" class="frame">
+            <div class="container split-layout">
+                <div class="split-column team-section">
+                    <h2 data-i18n="team.title"></h2>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <img src="assets/team/test_foued.jpg" alt="Photo of Foued Benidir">
+                            <h3>Foued BENIDIR</h3>
+                            <p data-i18n-object='{"path": "team.1.role"}'></p>
+                            <a href="https://linkedin.com/in/ex" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        </div>
+                        <div class="team-member">
+                            <img src="assets/team/test_carlos.jpg" alt="Photo of Carlos Dombret">
+                            <h3>Carlos DOMBRET</h3>
+                            <p data-i18n-object='{"path": "team.0.role"}'></p>
+                        </div>
+                        <!--
+                        <div class="team-member">
+                            <img src="assets/team/test_clara.jpg" alt="Photo of Clara Dubois">
+                            <h3>Clara DUBOIS</h3>
+                            <p data-i18n-object='{"path": "team.2.role"}'></p>
+                        </div>
+                        -->
+                    </div>
+                </div>
+
+                <div class="split-column contact-section">
+                    <h2 data-i18n="contact.title"></h2>
+                    <p data-i18n="contact.desc"></p>
+                    <form id="contact-form" action="/api/contact" method="POST">
+                        <div class="form-group">
+                            <label for="name" data-i18n="contact.fields.name"></label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-i18n="contact.fields.email"></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company" data-i18n="contact.fields.company"></label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-i18n="contact.fields.message"></label>
+                            <textarea id="message" name="message" rows="4" required minlength="20"></textarea>
+                        </div>
+                        <div class="form-group form-group-checkbox">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <label for="consent" data-i18n="contact.fields.consent"></label>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-i18n="contact.submit"></button>
+                    </form>
+                    <p id="form-status" role="status" aria-live="polite"></p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer-main">
+        <div class="container footer-container">
+            <div class="footer-links">
+                <a href="/legal" data-i18n="footer.legal"></a>
+                <a href="/privacy" data-i18n="footer.privacy"></a>
+                <a href="/terms" data-i18n="footer.terms"></a>
+            </div>
+            <div class="footer-lang">
+                <span data-i18n="footer.language"></span>:
+                <button class="lang-switch" data-lang="fr">Français</button>
+                <span>|</span>
+                <button class="lang-switch" data-lang="en">English</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
