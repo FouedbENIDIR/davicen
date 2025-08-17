@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fr: {
             brand: "Davicen",
             nav: { home: "Accueil", expertise: "Notre expertise", projects: "Projets", teamContact: "Équipe & Contact" },
-            hero: { kicker: "Conseil • Développement • IA", headline: "Davicen helps you to transform", ctaPrimary: "Nous contacter", ctaSecondary: "Voir nos projets" },
+            hero: { kicker: "Conseil • Développement • IA", headline: "Davicen vous accompagne dans votre transformation digitale.", ctaPrimary: "Nous contacter", ctaSecondary: "Voir nos projets" },
             expertise: { title: "Notre expertise", items: ["Développement d'application sur mesure", "Analyse de données et conseil", "Intégration d’IA", "Développement d’IA à partir de vos données"] },
             projects: { title: "Nos projets", learnMore: "En savoir plus", collapse: "Réduire" },
             team: { title: "Notre équipe" },
@@ -17,13 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 { title: "Application sur mesure B2B", details: "Application multi-tenant avec rôles, API sécurisée et intégrations ERP." },
                 { title: "Intégration d’IA", details: "Moteur RAG sur données privées, recherche sémantique et assistants métier." }
             ],
-            team: [ { role: "Lead Data" }, { role: "Ingénieur IA" }, { role: "Développeuse Full-Stack" }],
+            team: [ { role: "Senior Data Analyst" }, { role: "Ingénieur IA" }, { role: "Développeuse Full-Stack" }],
             formMessages: { success: "Merci ! Votre message a bien été envoyé.", error: "Une erreur est survenue. Merci de réessayer." }
         },
         en: {
             brand: "Davicen",
             nav: { home: "Home", expertise: "Our Expertise", projects: "Projects", teamContact: "Team & Contact" },
-            hero: { kicker: "Advisory • Development • AI", headline: "Davicen helps you to transform", ctaPrimary: "Contact us", ctaSecondary: "See projects" },
+            hero: { kicker: "Advisory • Development • AI", headline: "Davicen helps you to transform digitally with AI", ctaPrimary: "Contact us", ctaSecondary: "See projects" },
             expertise: { title: "Our Expertise", items: ["Custom application development", "Data analytics and advisory", "AI integration", "AI development from your data"] },
             projects: { title: "Projects", learnMore: "Learn more", collapse: "Collapse" },
             team: { title: "Our Team" },
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { title: "Custom B2B application", details: "Multi-tenant app with roles, secure API, and ERP integrations." },
                 { title: "AI Integration", details: "RAG on private data, semantic search, and task-specific assistants." }
             ],
-            team: [ { role: "Lead Data" }, { role: "AI Engineer" }, { role: "Full-Stack Developer" }],
+            team: [ { role: "Senior Data Analyst" }, { role: "AI Engineer" }, { role: "Full-Stack Developer" }],
             formMessages: { success: "Thanks! Your message has been sent.", error: "Something went wrong. Please try again." }
         }
     };
