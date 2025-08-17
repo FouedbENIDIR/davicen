@@ -31,15 +31,49 @@
 html {
     font-size: var(--base-font-size);
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+    /* scroll-snap-type: y mandatory; ← Supprimer cette ligne */
+}
+
+.frame {
+    min-height: 100vh;
+    padding-top: var(--section-padding-y);
+    padding-bottom: var(--section-padding-y);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* scroll-snap-align: start; ← Supprimer cette ligne */
+    border-bottom: 1px solid var(--border-color);
 }
 
 body {
     font-family: var(--font-family);
-    font-weight: var(--font-extralight); /* MODIFIÉ */
-    background-color: var(--bg-color);
+    font-weight: var(--font-extralight);
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
     color: var(--body-text);
     line-height: 1.6;
+    position: relative;
+}
+
+/* Overlay pour garder la lisibilité */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: -1;
+    pointer-events: none;
+}
+
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .container {
@@ -102,6 +136,15 @@ a:hover {
   html {
     scroll-behavior: auto;
   }
+  
+  body {
+    animation: none;
+    background: var(--bg-color);
+  }
+  
+  body::before {
+    background: transparent;
+  }
 }
 
 /* ================== HEADER ================== */
@@ -109,7 +152,8 @@ a:hover {
     position: sticky;
     top: 0;
     z-index: 10;
-    background-color: var(--header-bg);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-color);
     padding: 1rem 0;
 }
@@ -133,6 +177,11 @@ a:hover {
 .header-actions {
     display: flex;
     align-items: center;
+    gap: 1rem;
+}
+.lang-buttons {
+    display: flex;
+    align-items: center;
     gap: 0.25rem;
     color: var(--header-text);
 }
@@ -148,6 +197,57 @@ a:hover {
 }
 .lang-switch.active {
     text-decoration: underline;
+}
+
+/* ================== MOBILE MENU ================== */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--header-text);
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--border-color);
+        display: none;
+        z-index: 20;
+    }
+    
+    .main-nav.active {
+        display: block;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem 0;
+    }
+    
+    .main-nav li {
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .main-nav a {
+        display: block;
+        padding: 1rem var(--section-padding-x);
+    }
+    
+    .lang-buttons {
+        margin-left: 1rem;
+    }
 }
 
 /* ================== HERO ================== */
@@ -205,7 +305,6 @@ a:hover {
 .carousel {
     position: relative;
     width: 100%;
-    /* max-width: 900px; */
 }
 .carousel-track-container {
     overflow: hidden;
@@ -330,10 +429,10 @@ details p {
 #form-status.success { color: #28a745; }
 #form-status.error { color: #dc3545; }
 
-
 /* ================== FOOTER ================== */
 .site-footer-main {
-    background-color: var(--footer-bg);
+    background: rgba(0, 74, 173, 0.95);
+    backdrop-filter: blur(10px);
     color: var(--footer-text);
     padding: 2rem 0;
 }
@@ -363,8 +462,6 @@ details p {
 @media (max-width: 768px) {
     h1 { font-size: 2.5rem; }
     h2 { font-size: 2rem; }
-
-    .main-nav { display: none; /* Simplification pour mobile */ }
     
     .split-layout {
         grid-template-columns: 1fr;

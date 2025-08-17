@@ -138,7 +138,36 @@ document.addEventListener('DOMContentLoaded', () => {
            nextButton.click();
         }, 5500);
     }
-    
+// ================== MOBILE MENU ==================
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+const mainNav = document.querySelector('.main-nav');
+
+if (mobileMenuToggle && mainNav) {
+    mobileMenuToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('active');
+        const isOpen = mainNav.classList.contains('active');
+        mobileMenuToggle.setAttribute('aria-expanded', isOpen);
+        mobileMenuToggle.textContent = isOpen ? '✕' : '☰';
+    });
+
+    // Fermer le menu quand on clique sur un lien
+    mainNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mainNav.classList.remove('active');
+            mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            mobileMenuToggle.textContent = '☰';
+        });
+    });
+
+    // Fermer le menu si on clique ailleurs
+    document.addEventListener('click', (e) => {
+        if (!mainNav.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+            mainNav.classList.remove('active');
+            mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            mobileMenuToggle.textContent = '☰';
+        }
+    });
+}    
 
     // ================== CONTACT FORM ==================
     const form = document.getElementById('contact-form');

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Davicen — Conseil, Développement & IA</title>
-    <meta name="description" content="Davicen helps you to transform: applications sur mesure, data & conseil, intégration et développement d’IA.">
+    <meta name="description" content="Davicen helps you to transform: applications sur mesure, data & conseil, intégration et développement d'IA.">
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     
     <meta property="og:title" content="Davicen — Conseil, Développement & IA">
@@ -15,7 +15,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="css/style.css">
 
@@ -38,9 +38,12 @@
                 </ul>
             </nav>
             <div class="header-actions">
-                <button class="lang-switch" data-lang="fr">FR</button>
-                <span>/</span>
-                <button class="lang-switch" data-lang="en">EN</button>
+                <button class="mobile-menu-toggle" aria-label="Menu">☰</button>
+                <div class="lang-buttons">
+                    <button class="lang-switch" data-lang="fr">FR</button>
+                    <span>/</span>
+                    <button class="lang-switch" data-lang="en">EN</button>
+                </div>
             </div>
         </div>
     </header>
@@ -150,7 +153,7 @@
                 <div class="split-column contact-section">
                     <h2 data-i18n="contact.title"></h2>
                     <p data-i18n="contact.desc"></p>
-                    <form id="contact-form" action="/api/contact" method="POST">
+                    <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                         <div class="form-group">
                             <label for="name" data-i18n="contact.fields.name"></label>
                             <input type="text" id="name" name="name" required>
